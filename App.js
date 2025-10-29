@@ -151,28 +151,27 @@
 // });
 // //shorthand for creating native component rnfes
 
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import HomeScreen from './screens/HomeScreen'
-import ProfileScreen from './screens/ProfileScreen'
-import CartScreen from './screens/CartScreen'
+import { StyleSheet, Text, View } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import CartScreen from './screens/CartScreen';
+
 const App = () => {
   const Tab = createBottomTabNavigator();
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen}/>
-        <Tab.Screen name="Profile" component={ProfileScreen}/>
-        <Tab.Screen name="Cart" component={CartScreen}/>
+      <Tab.Navigator> 
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Cart" component={CartScreen} />
       </Tab.Navigator>
-
     </NavigationContainer>
-   
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
