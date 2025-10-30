@@ -158,16 +158,23 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CartScreen from './screens/CartScreen';
-
+import { createStackNavigator } from '@react-navigation/stack';
+import MenuDetails from './screens/MenuDetails';
 const App = () => {
-  const Tab = createBottomTabNavigator();
+  // const Tab = createBottomTabNavigator();
+  const Stack = createStackNavigator();
   return (
     <NavigationContainer>
-      <Tab.Navigator> 
+      {/* <Tab.Navigator> 
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
         <Tab.Screen name="Cart" component={CartScreen} />
-      </Tab.Navigator>
+      </Tab.Navigator> */}
+
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="MenuDetails" component={MenuDetails} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
