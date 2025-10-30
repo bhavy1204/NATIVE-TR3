@@ -160,6 +160,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import CartScreen from './screens/CartScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import MenuDetails from './screens/MenuDetails';
+import DrawerNavigation from './navigation/DrawerNavigation';
 const App = () => {
   // const Tab = createBottomTabNavigator();
   const Stack = createStackNavigator();
@@ -173,7 +174,7 @@ const App = () => {
 
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="MenuDetails" component={MenuDetails} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen options={{headerShown: false}} name="Home" component={DrawerNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
